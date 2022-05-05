@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} EOWM - {{hall_category}} BOOKING {% endblock title %}
+{% block content %}
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">{{hall_category}} BOOKING</h4>
+            <div class="d-inline-flex">
+                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">{{hall_category}} BOOKING</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid mb-4 mb-lg-0" src="{% static 'img/WhatsApp Image 2022-04-09 at 8.41.44 PM.jpeg' %}" alt="Image">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-4 font-weight-bold mb-4">{{hall_category}} BOOKING</h2>
+                
+                <form id="booking-form" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_check_in">check_In: </label>
+                        <input class="form-control" type="datetime-local" id="id_check_in" name="check_in" required>
+                    </div>
+                    <div class="input-div">
+                        <label for="id_check_out">check_Out: </label>
+                        <input class="form-control" type="datetime-local" id="id_check_out" name="check_out" required>
+                    </div>
+                    <br>
+                    
+                    <div class="input-div">
+                        <button class="btn btn-primary" type="submit">Book the Hall</button>
+                    </div>
+
+                </form>
+
+                <!-- <form>
+                    
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form> -->
+               
+
+
+                <!-- <div class="row py-2">
+                    <div class="col-sm-6">
+
+                        <h4 class="font-weight-bold">One Hour With Mama</h4>
+                        <p>An hour to learn at the feat of our highly esteemed mother in Christ</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4 class="font-weight-bold">EOWM Live on facebook</h4>
+                        <p>Join Mama on facebook as she lecture on keeping right relationships with God, your spouse and everyone around you</p>
+                    </div>
+                </div> -->
+                <!-- <a href="" class="btn btn-lg px-4 btn-outline-primary">Learn More</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    {% endblock %}

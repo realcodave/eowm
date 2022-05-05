@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} EOWM - Rooms {% endblock title %}
+{% block content %}
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Rooms Booking</h4>
+            <div class="d-inline-flex">
+                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Our Rooms</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    {% if user.is_authenticated %}
+
+    <!-- Blog Start -->
+    <div class="container pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Book now</h4>
+            <h4 class="display-4 font-weight-bold">Rooms Booking</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'img/IMG_0342.JPG' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <small>-N-</small>
+                        <strong class="text-uppercase m-0 text-white">5000</strong>
+                        <small></small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Single Room</h3>
+                        <!-- <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
+                        </div> -->
+                    </div>
+                </div>
+                <p>We have conducive and fully furnished rooms, where you can fellowship and have your quiet time with our heavenly Father</p>
+                <a class="btn btn-outline-primary mt-2 px-3" href="{% url 'single_book' category='SR' %}">Book now <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="col-lg-4 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'img/IMG_0337.JPG' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <small>-N-</small>
+                        <strong class="text-uppercase m-0 text-white">8000</strong>
+                        <small></small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Self Contained Room</h3>
+                        <!-- <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
+                        </div> -->
+                    </div>
+                </div>
+                <p>Our Self contained room is fully furnished and well equiped, affordable with airconditioning and serene environment</p>
+                <a class="btn btn-outline-primary mt-2 px-3" href="{% url 'single_book' category='SC' %}">Book now <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="col-lg-4 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'img/IMG_6382.JPG' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <small>-N</small>
+                        <strong class="text-uppercase m-0 text-white">1000</strong>
+                        <small></small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Dormitory Bunk Bed A (80 Beds)</h3>
+                        <!-- <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
+                        </div> -->
+                    </div>
+                </div>
+                <p>Our Dormitory room is well equiped with up to 80 bunk beds, cheap and affordable</p>
+                <a class="btn btn-outline-primary mt-2 px-3" href="{% url 'single_book' category='DA' %}">Book now <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="col-lg-4 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'img/IMG_6382.JPG' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <small>-N</small>
+                        <strong class="text-uppercase m-0 text-white">1000</strong>
+                        <small></small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Dormitory Bunk Bed B (40 Beds)</h3>
+                        <!-- <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
+                        </div> -->
+                    </div>
+                </div>
+                <p>This Dormitory can hold upto 40 people, furnished, mostly reserved for men in a case where we have both male and female visitors</p>
+                <a class="btn btn-outline-primary mt-2 px-3" href="{% url 'single_book' category='DB' %}">Book now <i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="col-lg-4 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'img/IMG_6382.JPG' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <small>-N</small>
+                        <strong class="text-uppercase m-0 text-white">1000</strong>
+                        <small></small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Dormitory Bunk Bed C (40 Beds)</h3>
+                        <!-- <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
+                        </div> -->
+                    </div>
+                </div>
+                <p>This Dormitory can hold upto 40 people, furnished, mostly reserved for women in a case where we have both male and female visitors</p>
+                <a class="btn btn-outline-primary mt-2 px-3" href="{% url 'single_book' category='DC' %}">Book now <i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- <div class="container pt-5">
+                <div class="row">
+                    {% for x in room_list %}
+                    <div class="col-lg-6 mb-5 blog-item">
+                        {{ x }}
+                        </div>
+                        {% endfor %}
+                        </div>
+                    </div> -->
+                
+        </div>
+    </div>
+    
+    {% else %}
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+
+                <p>Please <a href="{% url 'account_login' %}">Login</a> first.
+                    If you have not created an account yet, then please <a href="{% url 'account_signup' %}">Signup</a></p>
+                </div>
+                </div>
+                </div>
+    {% endif %}
+
+    <!-- Blog End -->
+
+
+{% endblock content %}

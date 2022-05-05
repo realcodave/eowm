@@ -1,0 +1,776 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item text-center active div">
+                    <img class="style-img"  src="{% static 'img/WhatsApp Image 2022-04-09 at 8.25.06 PM (1).jpeg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h3 class="text-primary text-capitalize m-0"></h3>
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white  font-weight-bold text-capitalize">Edith Okubanjo World Ministry</h2>
+                        <a href="" class="btn btn-lg btn-outline-dark mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now</a>
+                    </div>
+                </div> 
+                <div class="carousel-item text-center div">
+                    <img class="style-img" src="{% static 'img/WhatsApp Image 2022-04-09 at 8.41.42 PM.jpeg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <!-- <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3> -->
+                        <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Edith Okubanjo World Ministry</h2>
+                        <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Gym Class Start -->
+    <div class="container gym-class mb-5">
+        <div class="row px-3">
+            <div class="col-md-6 p-0">
+                <div class="gym-class-box d-flex flex-column align-items-end justify-content-center bg-primary text-right text-white py-5 px-5">
+                    <!-- <i class="flaticon-six-pack"></i> -->
+                    <h3 class="display-4 mb-3 text-white font-weight-bold">One Hour With Mama</h3>
+                    <p>
+                        One Hour with Mama is a time where Families are formed, built and dedicated. Every Thursday build your Spirit
+                    </p>
+                    <a href="" class="btn btn-lg btn-outline-light mt-4 px-4">Join Now</a>
+                </div>
+            </div>
+            <div class="col-md-6 p-0">
+                <div class="gym-class-box d-flex flex-column align-items-start justify-content-center bg-secondary text-left text-white py-5 px-5">
+                    <!-- <i class="flaticon-bodybuilding"></i> -->
+                    <h3 class="display-4 mb-3 text-white font-weight-bold">Edith Okubanjo World Ministry <i class="facebook"></i></h3>
+                    <p>
+                        Join mama live on facebook as she reveals secrets on how to keep your family in love, joy and hope
+                    </p>
+                    <a href="" class="btn btn-lg btn-outline-light mt-4 px-4">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gym Class End -->
+
+
+    <!-- About Start -->
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid mb-4 mb-lg-0" src="{% static 'img/about.jpg' %}" alt="Image">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-4 font-weight-bold mb-4">Healing Camp</h2>
+                <p>The healing camp is a place where people meet with God in a serene environment. You can book halls for seminars church activitise, you can book rooms and much more...</p>
+                <div class="row py-2">
+                    <div class="col-sm-4">
+                        <i class="display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">Halls</h4>
+                        <p>
+                            <a href="{% url 'halls' %}" class="btn btn-dark btn-outline-light mt-3 px-3">Book now</a></p>
+
+                    </div>
+                    <div class="col-sm-4">
+                        <i class=" display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">Rooms</h4>
+                        <p>
+                            <a href="{% url 'rooms' %}" class="btn btn-dark btn-outline-light mt-3 px-3">Book now</a></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class=" display-2 text-primary"></i>
+                        <h4 class="font-weight-bold">Field/Tent</h4>
+                        <p>
+                            <a href="{% url 'tent' %}" class="btn btn-dark btn-outline-light mt-3 px-3">Book now</a></p>
+                    </div>
+                </div>
+                <a href="" class="btn btn-lg px-4 btn-outline-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="display-3 text-primary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Prayer</h2>
+                        <p>Communicating with God is eccential,Prayer brings you closer to the Father. Do you want to pray in a quite and beautiful environment, Healing Camp is the place
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-primary text-white px-5" style="min-height: 300px;">
+                    <i class="display-3 text-secondary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">Seminar</h2>
+                        <p>Do you have a seminar or are you planning on having one, you can, with our good looking halls, you can hold your seminars, with confidence
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="d-flex align-items-center bg-secondary text-white px-5" style="min-height: 300px;">
+                    <i class="display-3 text-primary mr-3"></i>
+                    <div class="">
+                        <h2 class="text-white mb-3">School Programs</h2>
+                        <p>Do you have any school activities and you're looking for the right place, Healing Camp got you covered, you can organize school activities such as interhouse sport, school seminals, games and many more
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+    <!-- GYM Feature Start -->
+    <div class="container feature pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Why Choose?</h4>
+            <h4 class="display-4 font-weight-bold">Healing Camp</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/IMG_4834.jpg' %}" alt="Image">
+
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Seminals</h4>
+                        <p>organize your seminars with us, at the Healing Camp, worship God our Father at a serene and nice environment, book a hall <a href="halls.html"> now </a> for your seminar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/IMG_0299.JPG' %}" alt="Image">
+
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Beautiful Hall</h4>
+                        <p>Our Halls are beautiful and basked in the glory and presence of the Lord. Our halls are cheap and affordable. Book <a href="{% url 'halls' %}">now</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/IMG_0337.jpg' %}" alt="Image">
+
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">Comfortable Room</h4>
+                        <p>Our Rooms are beautiful, conducive and prepared so you can commune with your heavenly Father, in a friendly environment Book <a href="{% url 'rooms' %}">now</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/pupils.jpeg' %}" alt="Image">
+
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="font-weight-bold">School Seminar / Inter House Sport</h4>
+                        <p>The Healing camp is the best place for School Inter houses and school seminars, book <a href="{% url 'halls' %}">now</a> and stand a chance of getting a discount </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GYM Feature End -->
+
+
+    <!-- Subscribe Start -->
+    <!-- <div class="subscribe container-fluid my-5 py-5 text-center">
+        <h4 class="display-4 text-white font-weight-bold mt-5 mb-3">Subscribe Our Newsletter</h4>
+        <p class="text-white mb-4">Subscribe and get Our latest article in your inbox</p>
+        <form class="form-inline justify-content-center mb-5">
+            <div class="input-group">
+                <input type="text" class="form-control-lg" placeholder="Your Email">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                </div>
+            </div>
+        </form>
+    </div> -->
+    <!-- Subscribe End -->
+
+
+    <!-- Class Timetable Start -->
+    <!-- <div class="container gym-feature py-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Class Timetable</h4>
+            <h4 class="display-4 font-weight-bold">Working Hours and Class Time</h4>
+        </div>
+        <div class="tab-class">
+            <ul class="nav nav-pills justify-content-center mb-4">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#class-all">All Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#class-cardio">Cardio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#class-crossfit">Crossfit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#class-powerlifting">Powerlifting</a>
+                </li>
+            </ul> -->
+    <!-- <div class="tab-content">
+                <div id="class-all" class="container tab-pane p-0 active">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                    <th>Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="class-cardio" class="container tab-pane fade p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                    <th>Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Cardio</h5>John Deo</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="class-crossfit" class="container tab-pane fade p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                    <th>Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="class-powerlifting" class="container tab-pane fade p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg m-0">
+                            <thead class="bg-secondary text-white text-center">
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                    <th>Sunday</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">6.00am - 8.00am</th>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">10.00am - 12.00am</th>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">5.00pm - 7.00pm</th>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-secondary text-white align-middle">7.00pm - 9.00pm</th>
+                                    <td></td>
+                                    <td>
+                                        <h5>Cardio</h5>John Deo</td>
+                                    <td></td>
+                                    <td>
+                                        <h5>Crossfit</h5>Adam Phillips</td>
+                                    <td></td>
+                                    <td class="bg-primary text-white">
+                                        <h5 class="text-white">Power Lifting</h5>James Alien</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Class Timetable End -->
+
+
+    <!-- BMI Calculation Start -->
+    <!-- <div class="container-fluid position-relative bmi my-5">
+                <div class="container">
+                    <div class="row px-3 align-items-center">
+                        <div class="col-md-6">
+                            <div class="pr-md-3 d-none d-md-block">
+                                <h4 class="text-primary">Body Mass Index </h4>
+                                <h4 class="display-4 text-white font-weight-bold mb-4">Whate is BMI?</h4>
+                                <p class="m-0 text-white">Vero elitr lorem magna justo magna justo at justo est ipsum sed clita lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita clita rebum kasd magna erat diam</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 bg-secondary py-5">
+                            <div class="py-5 px-3">
+                                <h1 class="mb-4 text-white">Calculate your BMI</h1>
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col form-group">
+                                            <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Weight (KG)">
+                                        </div>
+                                        <div class="col form-group">
+                                            <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Height (CM)">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col form-group">
+                                            <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Age">
+                                        </div>
+                                        <div class="col form-group">
+                                            <select class="custom-select custom-select-lg bg-dark text-muted">
+                                        <option>Gender</option>
+                                        <option>Mal</option>
+                                        <option>Female</option>
+                                    </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="button" class="btn btn-lg btn-block btn-dark border-light" value="Calculate Now">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    <!-- BMI Calculation End -->
+
+
+    <!-- Team Start -->
+    <div class="container pt-5 team">
+        <div class="d-flex flex-column text-center mb-5 ">
+            <h4 class="text-primary font-weight-bold">EOWM</h4>
+            <h4 class="display-4 font-weight-bold">Team</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5 ml-auto">
+                <div class="card border-0 bg-secondary text-center text-white">
+                    <img class="card-img-top" src="{% static 'img/WhatsApp Image 2022-04-09 at 8.41.42 PM.jpeg' %}" alt="" height="180px">
+                    <div class="card-social d-flex align-items-center justify-content-center">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title text-primary">Rev. Edith Okubanjo </h4>
+                        <p class="card-text">Founder</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 ml-auto">
+                <div class="card border-0 bg-secondary text-center text-white">
+                    <img class="card-img-top" src="{% static 'img/IMG_3119.JPG' %}" alt="" height="180px">
+                    <div class="card-social d-flex align-items-center justify-content-center">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title text-primary">Pastor Clement Adeniyi</h4>
+                        <p class="card-text">Admin</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 ml-auto">
+                <div class="card border-0 bg-secondary text-center text-white">
+                    <img class="card-img-top" src="{% static 'img/IMG_1118.JPG' %}" alt="" height="180px">
+                    <div class="card-social d-flex align-items-center justify-content-center">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title text-primary">Taiwo Adeniyi</h4>
+                        <p class="card-text">Secretary</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card border-0 bg-secondary text-center text-white">
+                    <img class="card-img-top" src="img/IMG-20220327-WA0001.jpg" alt="" height="180px">
+                    <div class="card-social d-flex align-items-center justify-content-center">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <h4 class="card-title text-primary">Collins David</h4>
+                        <p class="card-text">Media/ Software Developer</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-fluid position-relative testimonial my-5">
+        <div class="container">
+            <div class="row px-3 align-items-center">
+                <div class="col-md-6 bg-secondary">
+                    <div class="d-flex align-items-center px-3" style="min-height: 450px;">
+                        <div id="carouselId" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselId" data-slide-to="1"></li>
+                                <li data-target="#carouselId" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                         <img width="80" height="80" class="rounded-circle bg-dark p-2" src="img/testimonial-1.jpg" alt="Image"> 
+                                        <div class="pl-4">
+                                            <h4 class="text-primary">Client Name</h4>
+                                            <p class="m-0">Profession</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                        <img width="80" height="80" class="rounded-circle bg-dark p-2" src="img/testimonial-2.jpg" alt="Image">
+                                        <div class="pl-4">
+                                            <h4 class="text-primary">Client Name</h4>
+                                            <p class="m-0">Profession</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center mb-4 text-white">
+                                         <img width="80" height="80" class="rounded-circle bg-dark p-2" src="img/testimonial-3.jpg" alt="Image"> 
+                                        <div class="pl-4">
+                                            <h4 class="text-primary">Client Name</h4>
+                                            <p class="m-0">Profession</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-text position-relative border bg-dark text-white mb-5 p-4">
+                                        Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolores tempor voluptua ipsum sanctus clita
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="pl-md-3 d-none d-md-block">
+                        <h4 class="text-primary">Testimonial</h4>
+                        <h4 class="display-4 mb-4 text-white font-weight-bold">What Our Clients Say?</h4>
+                        <p class="m-0 text-white">Vero elitr lorem magna justo magna justo at justo est ipsum sed clita lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita clita rebum kasd magna erat diam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-primary font-weight-bold">Our Bible School</h4>
+            <h4 class="display-4 font-weight-bold">The Churh Of God Theological School</h4>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'img/IMG_3470.JPG' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <!-- <small>01</small> -->
+                        <strong class="text-uppercase m-0 text-white">April</strong>
+                        <small>2022</small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Certificate Course</h3>
+                        <!-- <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
+                        </div> -->
+                    </div>
+                </div>
+                <a href="{% url 'halls' %}" class="btn btn-dark btn-outline-light mt-3 px-3">Register now</a>
+            </div>
+            <div class="col-lg-6 mb-5 blog-item">
+                <img class="img-fluid mb-4" src="{% static 'img/IMG_3400.JPG' %}" alt="Image">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex flex-column align-items-center justify-content-center rounded-circle bg-primary text-white" style="width: 80px; height: 80px;">
+                        <!-- <small>01</small> -->
+                        <strong class="text-uppercase m-0 text-white">April</strong>
+                        <small>2022</small>
+                    </div>
+                    <div class="pl-3">
+                        <h3 class="font-weight-bold">Diplomat Course</h3>
+                        <!-- <div class="d-flex">
+                            <small class="mr-2 text-muted"><i class="fa fa-user"></i> Admin</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-folder"></i> Web Design</small>
+                            <small class="mr-2 text-muted"><i class="fa fa-comments"></i> 15 Comments</small>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <p>Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos, sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod vero dolor sed kasd accusam</p> -->
+                <a href="{% url 'halls' %}" class="btn btn-dark btn-outline-light mt-3 px-3">Register now</a>
+            </div>
+            <p>Ark of God Theological School offers Certificates and Diploma in Theology. The Curriculum reflets a combination of the traditional seminary as well as a fresh attempt to meet the needs of the leaders of the church in Africa and elsewhere. The pre-requisites for admission to the programmes and requirements for graduation in each are comparabler to other major evangelical seminaries.</p>
+        </div>
+    </div>
+    <!-- Blog End -->
+{% endblock content %}
