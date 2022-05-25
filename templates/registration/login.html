@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %} 
+
+<div class="container-fluid page-header mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Log In</h4>
+        <div class="d-inline-flex">
+            <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Log In</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+<h4>Log In</h4>
+<form method="post">
+    <p>Please sign in with one
+        
+        of your existing third party accounts. Or, <a href="{% url 'signup' %}">sign up</a>
+        for a EOWM account and sign in below:</p>
+    {% csrf_token %} 
+    {{form.as_p}}
+
+    <!-- <div class="mb-3">
+  <label for="id_username" class="form-label">Username</label>
+  <input type="text" autofocus maxlength="150" name="username" class="form-control" id="id_username" placeholder="Username" required>
+</div>
+    <div class="mb-3">
+  <label for="id_password" class="form-label">Password</label>
+  <input type="password" autofocus autocomplete="current-password" required name="password" class="form-control" id="id_password" >
+        
+</div> -->
+
+
+    <button class="btn btn-success ml-2" type="submit">Log In</button>
+    <p>Forgot Password? <a href="{% url 'password_reset' %}">Reset Password</a></p>
+</form>
+</div>
+{% endblock %}

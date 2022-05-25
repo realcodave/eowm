@@ -1,6 +1,7 @@
 from django import forms
-from .models import Profile, Payment
+from .models import Profile, ConfirmPayment
 from django.forms import ModelForm
+from django.contrib.auth.forms import UserCreationForm
 
 
 class AvailabilityForm(forms.Form):
@@ -37,7 +38,20 @@ class ProfileForm(forms.Form):
 #         model = Profile
 #         fields = "__all__"
 
-class PaymentForm(forms.ModelForm):
+# class PaymentForm(forms.ModelForm):
+#     class Meta:
+#         model = ConfirmPayment
+#         fields = ("confirmation_photo", "account_name", "account_number", "bank")
+
+class CustomUserCreationForm(forms.ModelForm):
+    
     class Meta:
-        model = Payment
-        fields = ("amount", "email")
+        model = ConfirmPayment
+        fields = ("confirmation_photo", "account_name", "account_number", "bank")
+
+
+
+
+
+
+

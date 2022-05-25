@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container-fluid page-header mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">Profile</h4>
+        <div class="d-inline-flex">
+            <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+            <p class="m-0 text-white px-2">/</p>
+            <p class="m-0 text-white">Profile</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <h4>Account Number: 1234567890</h4>
+    <h3>Bank:   Abc Bank</h3>
+    <hr>
+    <form method="post"  enctype="multipart/form-data">
+        {% csrf_token %}
+       {{ form.as_p}}
+        <!-- <div class="mb-3">
+            <label for="id_confirmation_photo">Confirmation Photo</label>
+            <input type="file" autofocus class="form-control" name="confirmation_photo" id="id_confirmation_photo" accept="image/*" required>
+            <span class="helptext"><small> Transanction screen shot, or clear Transanction photo.</small></span>
+
+          </div>
+        <div class="mb-3">
+            <label for="id_account_name" class="form-label">Account Name</label>
+            <input type="text"  maxlength="150" name="account_name" class="form-control" id="id_account_name"  required>
+          </div>
+        <div class="mb-3">
+            <label for="id_account_number" class="form-label">Account Number</label>
+            <input type="text" maxlength="150" name="account_number" class="form-control" id="id_account_number"  required>
+          </div>
+        <div class="mb-3">
+            <label for="id_bank" class="form-label">Bank Name</label>
+            <input type="text" maxlength="150" name="bank" class="form-control" id="id_bank"  required>
+          </div>
+        
+            <input type="hidden"  name="confirmed" class="form-control" id="id_confirmed"  required> -->
+          
+        <button class="btn btn-success">Confirm</button>
+    </form>
+</div>
+
+{% endblock %}

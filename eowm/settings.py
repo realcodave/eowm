@@ -39,17 +39,21 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+
 # Added from django allauth
     'django.contrib.sites',
+    'ckeditor',
+    'email_signals',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
 
 
     # My Django apps
     'main',
-    'main.booking_functions'
+    'main.booking_functions',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -62,12 +66,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# AUTH_USER_MODEL = 'users.CustomUser'
+
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
+    # 'allauth.account.auth_backends.AuthenticationBackend',
     
 ]
 
@@ -158,9 +164,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'edithokubanjoworldministry5@gmail.com'
+EMAIL_HOST_PASSWORD = 'ministry2020'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'EOWM Team <noreply@example.com>' 
 
-LOGIN_REDIRECT_URL = 'index'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 
+LOGIN_REDIRECT_URL = 'profile'
 LOGOUT_REDIRECT_URL = 'index'
-ACCOUNT_SIGNUP_REDIRECT_URL = 'profile'
+# ACCOUNT_SIGNUP_REDIRECT_URL = 'profile'

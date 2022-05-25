@@ -94,27 +94,38 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.title} {self.surName} {self.firstName} '
 
-class Payment(models.Model):
-    amount = models.PositiveIntegerField()
-    ref = models.CharField()
-    email = models.EmailField()
-    verified = models.BooleanField(default=False)
-    date_created = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ('-date_created',)
+class ConfirmPayment(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    confirmation_photo = models.ImageField(upload_to='images/confirm')
+    account_name = models.CharField(max_length=240)
+    account_number = models.CharField(max_length=200)
+    bank = models.CharField(max_length=250)
+    confirmed = models.BooleanField(default=False)
     
     def __str__(self):
-        return f"Payment: {self.amount}"
-    
-    def save(save, *args, **kwargs) -> None:
-        while not self.ref:
-            ref = secrets.token_urlsafe(50)
-            object_with_similar_ref = Payment.objects.filter(ref=ref)
-            if not object_with_similar_ref:
-                self.ref = ref 
-        super().save(*args, **kwargs)
+        return f" It is {('confirmed' if self.confirmed else 'not confirmed')} You received money from {self.account_name}, account number {self.account_number}, bank {self.bank}, {('pleace confirm transaction' if not self.confirmed else 'Thank You For Confirming')}"
 
-    def amount_value(self) -> int:
-        return self.amount
+# class Payment(models.Model):
+#     amount = models.PositiveIntegerField()
+#     ref = models.CharField()
+#     email = models.EmailField()
+#     verified = models.BooleanField(default=False)
+#     date_created = models.DateTimeField(auto_now_add=True)
+
+#     class Meta:
+#         ordering = ('-date_created',)
+    
+#     def __str__(self):
+#         return f"Payment: {self.amount}"
+    
+#     def save(save, *args, **kwargs) -> None:
+#         while not self.ref:
+#             ref = secrets.token_urlsafe(50)
+#             object_with_similar_ref = Payment.objects.filter(ref=ref)
+#             if not object_with_similar_ref:
+#                 self.ref = ref 
+#         super().save(*args, **kwargs)
+
+#     def amount_value(self) -> int:
+#         return self.amount
             

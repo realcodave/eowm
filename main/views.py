@@ -1,8 +1,8 @@
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 from operator import attrgetter
-from django.views.generic import TemplateView, ListView, FormView, View, DeleteView
-from .models import Gallery, Profile, Rooms, Booking, Halls, Payment
-from .forms import AvailabilityForm, ProfileForm, HallAvailabilityForm, PaymentForm
+from django.views.generic import TemplateView, ListView, FormView, View, DeleteView, CreateView
+from .models import Gallery, Profile, Rooms, Booking, Halls
+from .forms import AvailabilityForm, ProfileForm, HallAvailabilityForm, ConfirmPayment
 from main.booking_functions.availability import check_availability, hall_availability
 from django.urls import reverse, reverse_lazy
 
@@ -15,6 +15,17 @@ def About(request):
     return render(request, 'about.html')
 
 
+class ConfirmPaymentView(CreateView):
+    model = ConfirmPayment
+    template_name = 'confirm.html'
+    fields = ("confirmation_photo", "account_name", "account_number", "bank")
+    success_url = '/booking_list/'
+
+    def form_valid(self, form):
+        confirm = form.save(commit=False)
+        confirm.user = self.request.user
+
+        return super().form_valid(form)
 # def MissionHall(request):
 #     return render
 
@@ -308,7 +319,7 @@ def ProfileView(request):
         
 #         return HttpResponse('<h1 style="color: green">Profile Updated </h1>')
 
-def initiate_payment(request: HttpRequest) -> HttpResponse:
-    if request == "POST":
-        # payment = forms.
-        pass
+# def initiate_payment(request: HttpRequest) -> HttpResponse:
+#     if request == "POST":
+#         # payment = forms.
+#         pass

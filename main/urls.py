@@ -1,6 +1,6 @@
 from django.urls import path
 from django.conf import settings
-from .views import Index, About, HallList, Tent, Mission_Hall, Ark, Galleries, RoomList, ProfileView,HallDetailView, HallBookingView, BookingList, HallList, BookingView, CancelBookingView, RoomDetailView
+from .views import Index, About, HallList, ConfirmPaymentView, Tent, Mission_Hall, Ark, Galleries, RoomList, ProfileView,HallDetailView, HallBookingView, BookingList, HallList, BookingView, CancelBookingView, RoomDetailView
  
 urlpatterns = [
     path('', Index, name="index"),
@@ -18,6 +18,7 @@ urlpatterns = [
     path('room/<str:category>', RoomDetailView.as_view(), name="single_book"),
     path('hall/<str:category>', HallDetailView.as_view(), name="mission"),
     path('profile/', ProfileView, name="profile"),
+    path('confirm/', ConfirmPaymentView.as_view(), name="confirm-payment"),
 
     ] 
 if settings.DEBUG:
